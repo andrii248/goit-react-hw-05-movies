@@ -31,7 +31,11 @@ export function getMovieDetails(id) {
   return axios.get(`${BASE_URL}/movie/${id}?${params}`);
 }
 
-export function getMovieCredits(id) {
+export function getImg(path, size) {
+  return `https://image.tmdb.org/t/p/${size}/${path}`;
+}
+
+export function getMovieCast(id) {
   const params = new URLSearchParams({
     api_key: KEY,
     language: 'en-US',
